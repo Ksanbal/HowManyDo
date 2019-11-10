@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HowManyDo
+namespace HowManyDo.User
 {
-	public partial class Form1 : Form
+	public partial class User_CheckNew : Form
 	{
-		public Form1()
+		public User_CheckNew()
 		{
 			InitializeComponent();
 		}

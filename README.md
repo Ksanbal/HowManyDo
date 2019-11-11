@@ -15,7 +15,7 @@
  <br>그 외에도 피드백이나 QnA가 가능합니다.
  
 ##  - 기능 구성도
-![System_map](./img/System_map.jpg)
+![System_map](./img/System_map_2.jpg)
 
 ## - 처리 파일 설계
 

@@ -76,6 +76,12 @@
     <Compile Include="Admin\Admin_Write.Designer.cs">
       <DependentUpon>Admin_Write.cs</DependentUpon>
     </Compile>
+    <Compile Include="CheckLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckLog.Designer.cs">
+      <DependentUpon>CheckLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,18 +95,6 @@
     </Compile>
     <Compile Include="User\User_CheckNew.Designer.cs">
       <DependentUpon>User_CheckNew.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User\User_Log.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="User\User_Log.Designer.cs">
-      <DependentUpon>User_Log.cs</DependentUpon>
-    </Compile>
-    <Compile Include="User\User_QnA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="User\User_QnA.Designer.cs">
-      <DependentUpon>User_QnA.cs</DependentUpon>
     </Compile>
     <Compile Include="User\User_Main.cs">
       <SubType>Form</SubType>
@@ -117,8 +111,14 @@
     <EmbeddedResource Include="Admin\Admin_ManageStu.resx">
       <DependentUpon>Admin_ManageStu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Admin_Regist.resx">
+      <DependentUpon>Admin_Regist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Admin\Admin_Write.resx">
       <DependentUpon>Admin_Write.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckLog.resx">
+      <DependentUpon>CheckLog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -132,6 +132,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="User\User_CheckNew.resx">
+      <DependentUpon>User_CheckNew.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User\User_Main.resx">
       <DependentUpon>User_Main.cs</DependentUpon>
     </EmbeddedResource>

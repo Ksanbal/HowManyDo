@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HowManyDo.Admin
 {
-	public partial class Admin_ManageStu : Form
+	public partial class Admin_Form_ManageStu : Form
 	{
-		public Admin_ManageStu()
+		public Admin_Form_ManageStu()
 		{
 			InitializeComponent();
 		}

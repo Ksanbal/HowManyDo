@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HowManyDo.Admin
 {
-	public partial class Admin_Regist : Form
+	public partial class Admin_Form_Regist : Form
 	{
-		public Admin_Regist()
+		public Admin_Form_Regist()
 		{
 			InitializeComponent();
 		}

@@ -55,7 +55,7 @@
 			this.AWrite_Lable_Name.Name = "AWrite_Lable_Name";
 			this.AWrite_Lable_Name.Size = new System.Drawing.Size(138, 23);
 			this.AWrite_Lable_Name.TabIndex = 2;
-			this.AWrite_Lable_Name.Text = " 원생 이름";
+			this.AWrite_Lable_Name.Text = "원생 이름";
 			this.AWrite_Lable_Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// AWrite_Btn_SelectPic

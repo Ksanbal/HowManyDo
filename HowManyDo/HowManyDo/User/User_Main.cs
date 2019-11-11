@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HowManyDo.User
 {
-	public partial class User_Main : Form
+	public partial class User_Form_Main : Form
 	{
-		public User_Main()
+		public User_Form_Main()
 		{
 			InitializeComponent();
 		}

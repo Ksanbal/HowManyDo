@@ -15,7 +15,7 @@
  <br>그 외에도 피드백이나 QnA가 가능합니다.
  
 ##  - 기능 구성도
-![System_map](./img/System_map_2.jpg)
+![System_map](./img/System_map_3.jpg)
 
 ## - 처리 파일 설계
  - RegistedMember : 등록되어 있는 학생 정보 리스트 (정보 : 학생 이름, 학생 생년월일, 학부모 이름, 아이디, 비밀번호)
@@ -23,7 +23,7 @@
  - ListWriteFile : Admin이 작성한 글이 정리되어 있는 List 파일
 
 ## - 사용자 인터페이스
-![System_map](./img/UserInterface_1.jpg)
-![System_map](./img/UserInterface_2.jpg)
+![System_map](./img/UserInterface_Admin_2.jpg)
+![System_map](./img/UserInterface_User_2.jpg)
 
 ##### Write by K_Sanbal

@@ -28,79 +28,88 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.label1 = new System.Windows.Forms.Label();
-			this.button1 = new System.Windows.Forms.Button();
-			this.textBox1 = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.label2 = new System.Windows.Forms.Label();
-			this.button2 = new System.Windows.Forms.Button();
+			this.Login_Label_Id = new System.Windows.Forms.Label();
+			this.Login_Btn_Login = new System.Windows.Forms.Button();
+			this.Login_TextB_Id = new System.Windows.Forms.TextBox();
+			this.Login_TextB_Passwd = new System.Windows.Forms.TextBox();
+			this.Login_Lable_Passwd = new System.Windows.Forms.Label();
+			this.Login_Btn_Cancel = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
-			// label1
+			// Login_Label_Id
 			// 
-			this.label1.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.label1.Location = new System.Drawing.Point(7, 14);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(100, 21);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "아이디";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.Login_Label_Id.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.Login_Label_Id.Location = new System.Drawing.Point(10, 21);
+			this.Login_Label_Id.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.Login_Label_Id.Name = "Login_Label_Id";
+			this.Login_Label_Id.Size = new System.Drawing.Size(143, 32);
+			this.Login_Label_Id.TabIndex = 0;
+			this.Login_Label_Id.Text = "아이디";
+			this.Login_Label_Id.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// button1
+			// Login_Btn_Login
 			// 
-			this.button1.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.button1.Location = new System.Drawing.Point(57, 110);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(99, 31);
-			this.button1.TabIndex = 1;
-			this.button1.Text = "로그인";
-			this.button1.UseVisualStyleBackColor = true;
+			this.Login_Btn_Login.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.Login_Btn_Login.Location = new System.Drawing.Point(81, 165);
+			this.Login_Btn_Login.Margin = new System.Windows.Forms.Padding(4);
+			this.Login_Btn_Login.Name = "Login_Btn_Login";
+			this.Login_Btn_Login.Size = new System.Drawing.Size(141, 46);
+			this.Login_Btn_Login.TabIndex = 1;
+			this.Login_Btn_Login.Text = "로그인";
+			this.Login_Btn_Login.UseVisualStyleBackColor = true;
+			this.Login_Btn_Login.Click += new System.EventHandler(this.Login_Btn_Login_Click);
 			// 
-			// textBox1
+			// Login_TextB_Id
 			// 
-			this.textBox1.Location = new System.Drawing.Point(113, 14);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(147, 21);
-			this.textBox1.TabIndex = 3;
+			this.Login_TextB_Id.Location = new System.Drawing.Point(161, 21);
+			this.Login_TextB_Id.Margin = new System.Windows.Forms.Padding(4);
+			this.Login_TextB_Id.Name = "Login_TextB_Id";
+			this.Login_TextB_Id.Size = new System.Drawing.Size(208, 28);
+			this.Login_TextB_Id.TabIndex = 3;
 			// 
-			// textBox2
+			// Login_TextB_Passwd
 			// 
-			this.textBox2.Location = new System.Drawing.Point(113, 64);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(147, 21);
-			this.textBox2.TabIndex = 5;
+			this.Login_TextB_Passwd.Location = new System.Drawing.Point(161, 96);
+			this.Login_TextB_Passwd.Margin = new System.Windows.Forms.Padding(4);
+			this.Login_TextB_Passwd.Name = "Login_TextB_Passwd";
+			this.Login_TextB_Passwd.Size = new System.Drawing.Size(208, 28);
+			this.Login_TextB_Passwd.TabIndex = 5;
 			// 
-			// label2
+			// Login_Lable_Passwd
 			// 
-			this.label2.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.label2.Location = new System.Drawing.Point(7, 64);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(100, 21);
-			this.label2.TabIndex = 4;
-			this.label2.Text = "비밀번호";
-			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.Login_Lable_Passwd.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.Login_Lable_Passwd.Location = new System.Drawing.Point(10, 96);
+			this.Login_Lable_Passwd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.Login_Lable_Passwd.Name = "Login_Lable_Passwd";
+			this.Login_Lable_Passwd.Size = new System.Drawing.Size(143, 32);
+			this.Login_Lable_Passwd.TabIndex = 4;
+			this.Login_Lable_Passwd.Text = "비밀번호";
+			this.Login_Lable_Passwd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// button2
+			// Login_Btn_Cancel
 			// 
-			this.button2.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.button2.Location = new System.Drawing.Point(162, 110);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(99, 31);
-			this.button2.TabIndex = 6;
-			this.button2.Text = "취소";
-			this.button2.UseVisualStyleBackColor = true;
+			this.Login_Btn_Cancel.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.Login_Btn_Cancel.Location = new System.Drawing.Point(231, 165);
+			this.Login_Btn_Cancel.Margin = new System.Windows.Forms.Padding(4);
+			this.Login_Btn_Cancel.Name = "Login_Btn_Cancel";
+			this.Login_Btn_Cancel.Size = new System.Drawing.Size(141, 46);
+			this.Login_Btn_Cancel.TabIndex = 6;
+			this.Login_Btn_Cancel.Text = "취소";
+			this.Login_Btn_Cancel.UseVisualStyleBackColor = true;
+			this.Login_Btn_Cancel.Click += new System.EventHandler(this.Login_Btn_Cancel_Click);
 			// 
 			// Main_Form_Login
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
+			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(281, 153);
-			this.Controls.Add(this.button2);
-			this.Controls.Add(this.textBox2);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.textBox1);
-			this.Controls.Add(this.button1);
-			this.Controls.Add(this.label1);
+			this.ClientSize = new System.Drawing.Size(401, 230);
+			this.Controls.Add(this.Login_Btn_Cancel);
+			this.Controls.Add(this.Login_TextB_Passwd);
+			this.Controls.Add(this.Login_Lable_Passwd);
+			this.Controls.Add(this.Login_TextB_Id);
+			this.Controls.Add(this.Login_Btn_Login);
+			this.Controls.Add(this.Login_Label_Id);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "Main_Form_Login";
 			this.Text = "로그인";
 			this.ResumeLayout(false);
@@ -110,11 +119,11 @@
 
 		#endregion
 
-		private System.Windows.Forms.Label label1;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.TextBox textBox1;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Label Login_Label_Id;
+		private System.Windows.Forms.Button Login_Btn_Login;
+		private System.Windows.Forms.TextBox Login_TextB_Id;
+		private System.Windows.Forms.TextBox Login_TextB_Passwd;
+		private System.Windows.Forms.Label Login_Lable_Passwd;
+		private System.Windows.Forms.Button Login_Btn_Cancel;
 	}
 }

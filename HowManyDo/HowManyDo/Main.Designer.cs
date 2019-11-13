@@ -29,35 +29,25 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form_Index));
-			this.Main_Btn_Admin = new System.Windows.Forms.Button();
-			this.Main_Btn_User = new System.Windows.Forms.Button();
+			this.Main_Btn_Login = new System.Windows.Forms.Button();
 			this.Main_Lable_Title = new System.Windows.Forms.Label();
 			this.Main_Pic_Logo = new System.Windows.Forms.PictureBox();
 			this.Main_Label_Title = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.Main_Pic_Logo)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// Main_Btn_Admin
+			// Main_Btn_Login
 			// 
-			this.Main_Btn_Admin.Font = new System.Drawing.Font("서울남산체 M", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.Main_Btn_Admin.Location = new System.Drawing.Point(17, 208);
-			this.Main_Btn_Admin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-			this.Main_Btn_Admin.Name = "Main_Btn_Admin";
-			this.Main_Btn_Admin.Size = new System.Drawing.Size(211, 93);
-			this.Main_Btn_Admin.TabIndex = 0;
-			this.Main_Btn_Admin.Text = "관리자 로그인";
-			this.Main_Btn_Admin.UseVisualStyleBackColor = true;
-			// 
-			// Main_Btn_User
-			// 
-			this.Main_Btn_User.Font = new System.Drawing.Font("서울남산체 M", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.Main_Btn_User.Location = new System.Drawing.Point(261, 208);
-			this.Main_Btn_User.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-			this.Main_Btn_User.Name = "Main_Btn_User";
-			this.Main_Btn_User.Size = new System.Drawing.Size(211, 93);
-			this.Main_Btn_User.TabIndex = 1;
-			this.Main_Btn_User.Text = "학부모 로그인";
-			this.Main_Btn_User.UseVisualStyleBackColor = true;
+			this.Main_Btn_Login.Font = new System.Drawing.Font("서울남산체 M", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.Main_Btn_Login.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.Main_Btn_Login.Location = new System.Drawing.Point(261, 208);
+			this.Main_Btn_Login.Margin = new System.Windows.Forms.Padding(4);
+			this.Main_Btn_Login.Name = "Main_Btn_Login";
+			this.Main_Btn_Login.Size = new System.Drawing.Size(211, 93);
+			this.Main_Btn_Login.TabIndex = 1;
+			this.Main_Btn_Login.Text = "로그인";
+			this.Main_Btn_Login.UseVisualStyleBackColor = true;
+			this.Main_Btn_Login.Click += new System.EventHandler(this.Main_Btn_Login_Click);
 			// 
 			// Main_Lable_Title
 			// 
@@ -74,7 +64,7 @@
 			// 
 			this.Main_Pic_Logo.Image = ((System.Drawing.Image)(resources.GetObject("Main_Pic_Logo.Image")));
 			this.Main_Pic_Logo.Location = new System.Drawing.Point(20, 18);
-			this.Main_Pic_Logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Main_Pic_Logo.Margin = new System.Windows.Forms.Padding(4);
 			this.Main_Pic_Logo.Name = "Main_Pic_Logo";
 			this.Main_Pic_Logo.Size = new System.Drawing.Size(50, 52);
 			this.Main_Pic_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -100,9 +90,8 @@
 			this.Controls.Add(this.Main_Pic_Logo);
 			this.Controls.Add(this.Main_Label_Title);
 			this.Controls.Add(this.Main_Lable_Title);
-			this.Controls.Add(this.Main_Btn_User);
-			this.Controls.Add(this.Main_Btn_Admin);
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Controls.Add(this.Main_Btn_Login);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "Main_Form_Index";
 			this.Text = "HowManyDo 애플미술";
 			((System.ComponentModel.ISupportInitialize)(this.Main_Pic_Logo)).EndInit();
@@ -111,9 +100,7 @@
 		}
 
 		#endregion
-
-		private System.Windows.Forms.Button Main_Btn_Admin;
-		private System.Windows.Forms.Button Main_Btn_User;
+		private System.Windows.Forms.Button Main_Btn_Login;
 		private System.Windows.Forms.Label Main_Lable_Title;
 		private System.Windows.Forms.PictureBox Main_Pic_Logo;
 		private System.Windows.Forms.Label Main_Label_Title;

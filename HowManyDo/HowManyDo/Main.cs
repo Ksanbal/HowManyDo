@@ -16,5 +16,11 @@ namespace HowManyDo
 		{
 			InitializeComponent();
 		}
+
+		private void Main_Btn_Login_Click(object sender, EventArgs e)
+		{
+			Main_Form_Login LoginForm = new Main_Form_Login();
+			LoginForm.ShowDialog();
+		}
 	}
 }

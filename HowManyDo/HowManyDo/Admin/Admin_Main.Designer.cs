@@ -135,6 +135,7 @@
 			this.Controls.Add(this.Admin_Btn_Write);
 			this.Name = "Admin_Form_Main";
 			this.Text = "HowManyDo 관리자";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Admin_Form_Main_FormClosing);
 			((System.ComponentModel.ISupportInitialize)(this.Admin_Pic_Logo)).EndInit();
 			this.ResumeLayout(false);
 

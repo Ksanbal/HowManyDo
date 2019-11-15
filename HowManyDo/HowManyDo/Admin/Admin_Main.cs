@@ -15,6 +15,9 @@ namespace HowManyDo.Admin
 		public Admin_Form_Main()
 		{
 			InitializeComponent();
+			
+			//Date레이블에 현재 날짜를 띄워주는 문장입니다.
+			Admin_Label_Date.Text = DateTime.Now.ToString("yyyy. MM. dd");
 		}
 
 

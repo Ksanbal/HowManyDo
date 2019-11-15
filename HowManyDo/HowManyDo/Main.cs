@@ -26,6 +26,7 @@ namespace HowManyDo
 			LoginCheck(Main_TextB_LoginId.Text, Main_TextB_LoginPasswd.Text);
 		}
 
+
 		private void Main_Btn_Cancel_Click(object sender, EventArgs e)
 		{
 			Close();
@@ -53,7 +54,7 @@ namespace HowManyDo
 			else //아이디가 일치하는 경우
 			{
 				// 파일내에 비밀번호와 사용자 이름, 권한을 배열로 반환
-				StreamReader sr = new StreamReader(AccountPath + @"\" + RightId); //입력받은 계정 정보 파일의 경로
+				StreamReader sr = new StreamReader(AccountPath + @"\" + RightId, Encoding.Default); //입력받은 계정 정보 파일의 경로
 				string[] account = new string[3];
 				int i = 0;
 
@@ -88,7 +89,7 @@ namespace HowManyDo
 					}
 				}
 			}
-		}
+		} //LoginCheck
 
 		//부모폼을 숨기기 위해 부모폼을 비활성화하고 숨기는 메소드
 		private void DisableForm()
@@ -96,6 +97,6 @@ namespace HowManyDo
 			this.Enabled = false;
 			this.ShowInTaskbar = false;
 			this.Opacity = 0;
-		}
+		} //DisableForm
 	}
 }

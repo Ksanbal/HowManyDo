@@ -16,5 +16,11 @@ namespace HowManyDo.User
 		{
 			InitializeComponent();
 		}
+
+		// 접속한 유저의 이름을 노출시키기 위한 프로퍼티입니다.
+		public string SetUsername
+		{
+			set { User_Label_Welcome.Text = "환영합니다 " + value.ToString() + "님"; }
+		}
 	}
 }

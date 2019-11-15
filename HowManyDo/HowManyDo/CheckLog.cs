@@ -16,5 +16,10 @@ namespace HowManyDo
 		{
 			InitializeComponent();
 		}
+
+		private void CheckLog_Btn_Cancel_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
 	}
 }

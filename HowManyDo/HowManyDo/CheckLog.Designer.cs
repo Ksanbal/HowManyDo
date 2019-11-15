@@ -46,6 +46,7 @@
 			this.CheckLog_Btn_Cancel.TabIndex = 12;
 			this.CheckLog_Btn_Cancel.Text = "취소";
 			this.CheckLog_Btn_Cancel.UseVisualStyleBackColor = true;
+			this.CheckLog_Btn_Cancel.Click += new System.EventHandler(this.CheckLog_Btn_Cancel_Click);
 			// 
 			// CheckLog_Pic_SelectedPic
 			// 

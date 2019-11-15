@@ -97,6 +97,7 @@
 			this.User_btn_Check.TabIndex = 8;
 			this.User_btn_Check.Text = "진행상황\r\n확인하기";
 			this.User_btn_Check.UseVisualStyleBackColor = true;
+			this.User_btn_Check.Click += new System.EventHandler(this.User_btn_Check_Click);
 			// 
 			// User_Form_Main
 			// 
@@ -111,6 +112,7 @@
 			this.Controls.Add(this.User_btn_Check);
 			this.Name = "User_Form_Main";
 			this.Text = "HowManyDo 학부모";
+			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.User_Form_Main_FormClosing);
 			((System.ComponentModel.ISupportInitialize)(this.User_Pic_Logo)).EndInit();
 			this.ResumeLayout(false);
 

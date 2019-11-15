@@ -23,6 +23,7 @@ namespace HowManyDo.Admin
 			set { Admin_Label_Welcome.Text = "환영합니다 " + value.ToString() + "님"; }
 		}
 
+		//프로그램 종료시 확인 후 전체 프로그램 종료
 		private void Admin_Form_Main_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			if (MessageBox.Show("프로그램을 종료하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)

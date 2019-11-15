@@ -16,5 +16,31 @@ namespace HowManyDo.Admin
 		{
 			InitializeComponent();
 		}
+
+
+		private void AManage_Btn_Regist_Click(object sender, EventArgs e)
+		{
+			Admin_Form_Regist regist = new Admin_Form_Regist();
+			regist.ShowDialog();
+		}
+
+
+
+		private void AManage_Btn_Modify_Click(object sender, EventArgs e)
+		{
+
+		}
+
+
+		private void AManage_Btn_Delete_Click(object sender, EventArgs e)
+		{
+
+		}
+
+
+		private void AManage_Btn_Cancel_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
 	}
 }

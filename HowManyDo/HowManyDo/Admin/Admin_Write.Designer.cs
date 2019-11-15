@@ -67,6 +67,7 @@
 			this.AWrite_Btn_SelectPic.TabIndex = 3;
 			this.AWrite_Btn_SelectPic.Text = "사진 첨부";
 			this.AWrite_Btn_SelectPic.UseVisualStyleBackColor = true;
+			this.AWrite_Btn_SelectPic.Click += new System.EventHandler(this.AWrite_Btn_SelectPic_Click);
 			// 
 			// AWrtie_Pic_SelectedPic
 			// 
@@ -88,6 +89,7 @@
 			this.AWrtie_Btn_Send.TabIndex = 5;
 			this.AWrtie_Btn_Send.Text = "보내기";
 			this.AWrtie_Btn_Send.UseVisualStyleBackColor = true;
+			this.AWrtie_Btn_Send.Click += new System.EventHandler(this.AWrtie_Btn_Send_Click);
 			// 
 			// AWrite_Btn_Temp
 			// 
@@ -98,6 +100,7 @@
 			this.AWrite_Btn_Temp.TabIndex = 6;
 			this.AWrite_Btn_Temp.Text = "임시저장";
 			this.AWrite_Btn_Temp.UseVisualStyleBackColor = true;
+			this.AWrite_Btn_Temp.Click += new System.EventHandler(this.AWrite_Btn_Temp_Click);
 			// 
 			// AWrite_Btn_Cancel
 			// 
@@ -108,6 +111,7 @@
 			this.AWrite_Btn_Cancel.TabIndex = 7;
 			this.AWrite_Btn_Cancel.Text = "취소";
 			this.AWrite_Btn_Cancel.UseVisualStyleBackColor = true;
+			this.AWrite_Btn_Cancel.Click += new System.EventHandler(this.AWrite_Btn_Cancel_Click);
 			// 
 			// AWrite_Listb_Name
 			// 

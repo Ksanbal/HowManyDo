@@ -54,6 +54,7 @@
 			this.AManage_Btn_Cancel.TabIndex = 6;
 			this.AManage_Btn_Cancel.Text = "나가기";
 			this.AManage_Btn_Cancel.UseVisualStyleBackColor = true;
+			this.AManage_Btn_Cancel.Click += new System.EventHandler(this.AManage_Btn_Cancel_Click);
 			// 
 			// AManage_Btn_Delete
 			// 
@@ -65,6 +66,7 @@
 			this.AManage_Btn_Delete.TabIndex = 7;
 			this.AManage_Btn_Delete.Text = "원생 삭제";
 			this.AManage_Btn_Delete.UseVisualStyleBackColor = true;
+			this.AManage_Btn_Delete.Click += new System.EventHandler(this.AManage_Btn_Delete_Click);
 			// 
 			// AManage_Btn_Modify
 			// 
@@ -76,6 +78,7 @@
 			this.AManage_Btn_Modify.TabIndex = 8;
 			this.AManage_Btn_Modify.Text = "원생 정보 수정";
 			this.AManage_Btn_Modify.UseVisualStyleBackColor = true;
+			this.AManage_Btn_Modify.Click += new System.EventHandler(this.AManage_Btn_Modify_Click);
 			// 
 			// AManage_Btn_Regist
 			// 
@@ -87,6 +90,7 @@
 			this.AManage_Btn_Regist.TabIndex = 9;
 			this.AManage_Btn_Regist.Text = "원생 등록";
 			this.AManage_Btn_Regist.UseVisualStyleBackColor = true;
+			this.AManage_Btn_Regist.Click += new System.EventHandler(this.AManage_Btn_Regist_Click);
 			// 
 			// Admin_Form_ManageStu
 			// 

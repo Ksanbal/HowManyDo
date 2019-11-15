@@ -41,6 +41,7 @@
 			this.ALog_Btn_Cancel.TabIndex = 4;
 			this.ALog_Btn_Cancel.Text = "나가기";
 			this.ALog_Btn_Cancel.UseVisualStyleBackColor = true;
+			this.ALog_Btn_Cancel.Click += new System.EventHandler(this.ALog_Btn_Cancel_Click);
 			// 
 			// ALog_ListV_List
 			// 

@@ -137,6 +137,7 @@
 			this.ARegist_Btn_Ok.TabIndex = 10;
 			this.ARegist_Btn_Ok.Text = "등록";
 			this.ARegist_Btn_Ok.UseVisualStyleBackColor = true;
+			this.ARegist_Btn_Ok.Click += new System.EventHandler(this.ARegist_Btn_Ok_Click);
 			// 
 			// ARegist_Btn_Cancel
 			// 
@@ -147,6 +148,7 @@
 			this.ARegist_Btn_Cancel.TabIndex = 11;
 			this.ARegist_Btn_Cancel.Text = "나가기";
 			this.ARegist_Btn_Cancel.UseVisualStyleBackColor = true;
+			this.ARegist_Btn_Cancel.Click += new System.EventHandler(this.ARegist_Btn_Cancel_Click);
 			// 
 			// ARegist_ProgressBar
 			// 

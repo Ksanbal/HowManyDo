@@ -49,6 +49,7 @@
 			this.Admin_Btn_Write.TabIndex = 0;
 			this.Admin_Btn_Write.Text = "글 작성하기";
 			this.Admin_Btn_Write.UseVisualStyleBackColor = true;
+			this.Admin_Btn_Write.Click += new System.EventHandler(this.Admin_Btn_Write_Click);
 			// 
 			// Admin_Btn_Log
 			// 
@@ -59,6 +60,7 @@
 			this.Admin_Btn_Log.TabIndex = 1;
 			this.Admin_Btn_Log.Text = "내역 확인하기";
 			this.Admin_Btn_Log.UseVisualStyleBackColor = true;
+			this.Admin_Btn_Log.Click += new System.EventHandler(this.Admin_Btn_Log_Click);
 			// 
 			// Admin_Btn_Manage
 			// 
@@ -69,6 +71,7 @@
 			this.Admin_Btn_Manage.TabIndex = 2;
 			this.Admin_Btn_Manage.Text = "원생 관리";
 			this.Admin_Btn_Manage.UseVisualStyleBackColor = true;
+			this.Admin_Btn_Manage.Click += new System.EventHandler(this.Admin_Btn_Manage_Click);
 			// 
 			// Admin_Label_Date
 			// 

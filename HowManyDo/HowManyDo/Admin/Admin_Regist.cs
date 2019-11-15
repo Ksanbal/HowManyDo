@@ -16,5 +16,22 @@ namespace HowManyDo.Admin
 		{
 			InitializeComponent();
 		}
+
+
+		private void ARegist_Btn_Ok_Click(object sender, EventArgs e)
+		{
+			MessageBox.Show("등록");
+		}
+
+
+		private void ARegist_Btn_Cancel_Click(object sender, EventArgs e)
+		{
+			if (MessageBox.Show("정말 취소하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
+			{
+				Close();
+			}
+			else
+			{ }
+		}
 	}
 }

@@ -16,5 +16,10 @@ namespace HowManyDo.Admin
 		{
 			InitializeComponent();
 		}
+
+		private void ALog_Btn_Cancel_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
 	}
 }

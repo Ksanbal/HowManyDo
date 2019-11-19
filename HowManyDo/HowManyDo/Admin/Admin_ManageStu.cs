@@ -17,7 +17,7 @@ namespace HowManyDo.Admin
 		public Admin_Form_ManageStu()
 		{
 			InitializeComponent();
-			SetzlistView();
+			SetzlistView(); // 리스트뷰 내용을 업데이트
 		}
 
 
@@ -25,6 +25,7 @@ namespace HowManyDo.Admin
 		{
 			Admin_Form_Regist regist = new Admin_Form_Regist();
 			regist.ShowDialog();
+			SetzlistView(); // 리스트뷰 내용을 업데이트
 		}
 
 
@@ -33,6 +34,7 @@ namespace HowManyDo.Admin
 		{
 			Admin_Form_Modify modify = new Admin_Form_Modify();
 			modify.ShowDialog();
+			SetzlistView(); // 리스트뷰 내용을 업데이트
 		}
 
 
@@ -51,6 +53,9 @@ namespace HowManyDo.Admin
 		//메소드
 		private void SetzlistView()
 		{
+			//리스트 정보를 클리어
+			AManage_ListV_List.Items.Clear();
+
 			//계정들이 저장된 경로
 			string accountpath = @"D:\HG\Programing\HowManyDo\HowManyDo\HowManyDo\bin\Accounts";
 
@@ -67,7 +72,7 @@ namespace HowManyDo.Admin
 			{
 				StreamReader sr = new StreamReader(accountpath+@"\"+filename, Encoding.Default);
 				ListViewItem listviewitem = new ListViewItem();
-
+				
 				listviewitem.Text = sr.ReadLine();
 				listviewitem.SubItems.Add(sr.ReadLine());
 				listviewitem.SubItems.Add(sr.ReadLine());

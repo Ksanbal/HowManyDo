@@ -64,6 +64,12 @@
     <Compile Include="Admin\Admin_ManageStu.Designer.cs">
       <DependentUpon>Admin_ManageStu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Admin_Modify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_Modify.Designer.cs">
+      <DependentUpon>Admin_Modify.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Admin_Regist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Admin_ManageStu.resx">
       <DependentUpon>Admin_ManageStu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Admin_Modify.resx">
+      <DependentUpon>Admin_Modify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\Admin_Regist.resx">
       <DependentUpon>Admin_Regist.cs</DependentUpon>

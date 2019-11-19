@@ -33,16 +33,26 @@
 			this.AManage_Btn_Delete = new System.Windows.Forms.Button();
 			this.AManage_Btn_Modify = new System.Windows.Forms.Button();
 			this.AManage_Btn_Regist = new System.Windows.Forms.Button();
+			this.sname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.birth = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.pname = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.SuspendLayout();
 			// 
 			// AManage_ListV_List
 			// 
+			this.AManage_ListV_List.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.sname,
+            this.birth,
+            this.pname,
+            this.id});
 			this.AManage_ListV_List.HideSelection = false;
 			this.AManage_ListV_List.Location = new System.Drawing.Point(13, 13);
 			this.AManage_ListV_List.Name = "AManage_ListV_List";
 			this.AManage_ListV_List.Size = new System.Drawing.Size(328, 425);
 			this.AManage_ListV_List.TabIndex = 0;
 			this.AManage_ListV_List.UseCompatibleStateImageBehavior = false;
+			this.AManage_ListV_List.View = System.Windows.Forms.View.Details;
 			// 
 			// AManage_Btn_Cancel
 			// 
@@ -92,6 +102,22 @@
 			this.AManage_Btn_Regist.UseVisualStyleBackColor = true;
 			this.AManage_Btn_Regist.Click += new System.EventHandler(this.AManage_Btn_Regist_Click);
 			// 
+			// sname
+			// 
+			this.sname.Text = "학생이름";
+			// 
+			// birth
+			// 
+			this.birth.Text = "생년월일";
+			// 
+			// pname
+			// 
+			this.pname.Text = "학부모성함";
+			// 
+			// id
+			// 
+			this.id.Text = "아이디";
+			// 
 			// Admin_Form_ManageStu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -115,5 +141,9 @@
 		private System.Windows.Forms.Button AManage_Btn_Delete;
 		private System.Windows.Forms.Button AManage_Btn_Modify;
 		private System.Windows.Forms.Button AManage_Btn_Regist;
+		private System.Windows.Forms.ColumnHeader sname;
+		private System.Windows.Forms.ColumnHeader birth;
+		private System.Windows.Forms.ColumnHeader pname;
+		private System.Windows.Forms.ColumnHeader id;
 	}
 }

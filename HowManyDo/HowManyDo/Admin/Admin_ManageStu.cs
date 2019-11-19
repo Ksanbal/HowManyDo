@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using System.IO;
+
 namespace HowManyDo.Admin
 {
 	public partial class Admin_Form_ManageStu : Form
@@ -15,6 +17,7 @@ namespace HowManyDo.Admin
 		public Admin_Form_ManageStu()
 		{
 			InitializeComponent();
+			SetzlistView();
 		}
 
 
@@ -42,6 +45,37 @@ namespace HowManyDo.Admin
 		private void AManage_Btn_Cancel_Click(object sender, EventArgs e)
 		{
 			Close();
+		}
+
+
+		//메소드
+		private void SetzlistView()
+		{
+			//계정들이 저장된 경로
+			string accountpath = @"D:\HG\Programing\HowManyDo\HowManyDo\HowManyDo\bin\Accounts";
+
+			//경로에 존재하는 파일들을 리스트로 받아온다
+			DirectoryInfo di = new DirectoryInfo(accountpath);
+			List<string> accounts = new List<string>();
+			foreach(var item in di.GetFiles())
+			{
+				accounts.Add(item.Name);
+			}
+
+			// 각 파일의 내용을 리스트뷰에 뿌려준다
+			foreach(string filename in accounts)
+			{
+				StreamReader sr = new StreamReader(accountpath+@"\"+filename, Encoding.Default);
+				ListViewItem listviewitem = new ListViewItem();
+
+				listviewitem.Text = sr.ReadLine();
+				listviewitem.SubItems.Add(sr.ReadLine());
+				listviewitem.SubItems.Add(sr.ReadLine());
+				listviewitem.SubItems.Add(sr.ReadLine());
+
+				AManage_ListV_List.Items.Add(listviewitem);
+			}
+
 		}
 	}
 }

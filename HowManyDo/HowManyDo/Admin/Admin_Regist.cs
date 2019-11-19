@@ -31,8 +31,6 @@ namespace HowManyDo.Admin
 					// 등록 기능 구현
 					RegistNewAccount(ARegist_TextB_Sname.Text, ARegist_TextB_Birth.Text, ARegist_TextB_Pname.Text,
 						ARegist_TextB_Id.Text, ARegist_TextB_Passwd.Text, "user");
-					MessageBox.Show("학생 등록이 완료되었습니다.");
-					Close();
 				}
 				else
 				{ }
@@ -42,8 +40,6 @@ namespace HowManyDo.Admin
 				// 등록 기능 구현
 				RegistNewAccount(ARegist_TextB_Sname.Text, ARegist_TextB_Birth.Text, ARegist_TextB_Pname.Text, 
 					ARegist_TextB_Id.Text, ARegist_TextB_Passwd.Text, "user");
-				MessageBox.Show("학생 등록이 완료되었습니다.");
-				Close();
 			}
 		}
 
@@ -61,6 +57,19 @@ namespace HowManyDo.Admin
 		private void RegistNewAccount(string sname, string birth, string pname, string id, string passwd, string permission)
 		{
 			string[] account = { sname, birth, pname, id, passwd, permission};
+
+			// 같은 아이디가 있는지 확인
+			DirectoryInfo di = new DirectoryInfo(@"D:\HG\Programing\HowManyDo\HowManyDo\HowManyDo\bin\Accounts");
+			foreach(var item in di.GetFiles())
+			{
+				if(item.Name == id+".txt")
+				{
+					MessageBox.Show("이미 존재하는 아이디입니다.");
+					return;
+				}
+			}
+
+			// 학생 정보가 담긴 파일을 새로 작성
 			StreamWriter sw = new StreamWriter(@"D:\HG\Programing\HowManyDo\HowManyDo\HowManyDo\bin\Accounts\" + id + ".txt");
 			
 			foreach(string i in account)
@@ -68,6 +77,9 @@ namespace HowManyDo.Admin
 				sw.WriteLine(i);
 			}
 			sw.Close();
-		}
+
+			MessageBox.Show("학생 등록이 완료되었습니다.");
+			Close();
+			}
 	}
 }

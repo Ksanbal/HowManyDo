@@ -28,7 +28,8 @@ namespace HowManyDo.Admin
 
 		private void AManage_Btn_Modify_Click(object sender, EventArgs e)
 		{
-
+			Admin_Form_Modify modify = new Admin_Form_Modify();
+			modify.ShowDialog();
 		}
 
 

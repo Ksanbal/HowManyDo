@@ -33,6 +33,7 @@ namespace HowManyDo.Admin
 		private void AManage_Btn_Modify_Click(object sender, EventArgs e)
 		{
 			Admin_Form_Modify modify = new Admin_Form_Modify();
+			// modify.Setid = 선택된 아이템의 3번째 서브 아이템의 텍스트(아이디)
 			modify.ShowDialog();
 			SetzlistView(); // 리스트뷰 내용을 업데이트
 		}

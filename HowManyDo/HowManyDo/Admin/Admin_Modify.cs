@@ -18,6 +18,7 @@ namespace HowManyDo.Admin
 		{
 			InitializeComponent();
 			SetTextBoxs(selectedid);
+			label1.Text = selectedid;
 		}
 
 		private string selectedid;

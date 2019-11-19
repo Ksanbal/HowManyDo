@@ -55,35 +55,35 @@ namespace HowManyDo
 			{
 				// 파일내에 비밀번호와 사용자 이름, 권한을 배열로 반환
 				StreamReader sr = new StreamReader(AccountPath + @"\" + RightId, Encoding.Default); //입력받은 계정 정보 파일의 경로
-				string[] account = new string[3];
+				string[] account = new string[6];
 				int i = 0;
 
-				while (i < 3)
+				while (i < 6)
 				{
 					account[i] = sr.ReadLine();
 					i++;
 				}
 
 				//입력된 아이디와 비밀번호가 같은지 확인하는 메소드
-				//account[0] : 비밀번호, account[1] : 사용자명, account[2] : 권한
-				if (account[0] != InputPasswd) // 비밀번호가 틀렸을 경우
+				//account[0] : 학생이름, account[1] : 생년월일, account[2] : 학부모이름, account[3] : 아이디, account[4] : 비밀번호, account[5] : 권한
+				if (account[4] != InputPasswd) // 비밀번호가 틀렸을 경우
 				{
 					MessageBox.Show("비밀번호가 틀렸습니다.");
 				}
 				else
 				{
 					MessageBox.Show("로그인 성공");
-					if (account[2] == "admin")
+					if (account[5] == "admin")
 					{
 						Admin_Form_Main adminform = new Admin_Form_Main();
-						adminform.SetUsername = account[1];
+						adminform.SetUsername = account[2]; // 학부모이름을 프로퍼티로 입력
 						adminform.Show();
 						DisableForm();
 					}
-					else if (account[2] == "user")
+					else if (account[5] == "user")
 					{
 						User_Form_Main userform = new User_Form_Main();
-						userform.SetUsername = account[1];
+						userform.SetUsername = account[2]; // 학부모이름을 프로퍼티로 입력
 						userform.Show();
 						DisableForm();
 					}

@@ -59,6 +59,7 @@
 			this.AModify_Btn_Cancel.TabIndex = 24;
 			this.AModify_Btn_Cancel.Text = "나가기";
 			this.AModify_Btn_Cancel.UseVisualStyleBackColor = true;
+			this.AModify_Btn_Cancel.Click += new System.EventHandler(this.AModify_Btn_Cancel_Click);
 			// 
 			// AModify_Btn_Ok
 			// 
@@ -69,6 +70,7 @@
 			this.AModify_Btn_Ok.TabIndex = 23;
 			this.AModify_Btn_Ok.Text = "수정";
 			this.AModify_Btn_Ok.UseVisualStyleBackColor = true;
+			this.AModify_Btn_Ok.Click += new System.EventHandler(this.AModify_Btn_Ok_Click);
 			// 
 			// AModify_Label_Passwd
 			// 

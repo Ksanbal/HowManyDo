@@ -47,7 +47,7 @@
 			// AModify_ProgressBar
 			// 
 			this.AModify_ProgressBar.Location = new System.Drawing.Point(425, 42);
-			this.AModify_ProgressBar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+			this.AModify_ProgressBar.Margin = new System.Windows.Forms.Padding(6);
 			this.AModify_ProgressBar.Name = "AModify_ProgressBar";
 			this.AModify_ProgressBar.Size = new System.Drawing.Size(288, 42);
 			this.AModify_ProgressBar.TabIndex = 25;
@@ -56,7 +56,7 @@
 			// 
 			this.AModify_Btn_Cancel.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
 			this.AModify_Btn_Cancel.Location = new System.Drawing.Point(425, 232);
-			this.AModify_Btn_Cancel.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+			this.AModify_Btn_Cancel.Margin = new System.Windows.Forms.Padding(6);
 			this.AModify_Btn_Cancel.Name = "AModify_Btn_Cancel";
 			this.AModify_Btn_Cancel.Size = new System.Drawing.Size(288, 74);
 			this.AModify_Btn_Cancel.TabIndex = 24;
@@ -68,7 +68,7 @@
 			// 
 			this.AModify_Btn_Ok.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
 			this.AModify_Btn_Ok.Location = new System.Drawing.Point(425, 124);
-			this.AModify_Btn_Ok.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+			this.AModify_Btn_Ok.Margin = new System.Windows.Forms.Padding(6);
 			this.AModify_Btn_Ok.Name = "AModify_Btn_Ok";
 			this.AModify_Btn_Ok.Size = new System.Drawing.Size(288, 74);
 			this.AModify_Btn_Ok.TabIndex = 23;
@@ -90,7 +90,7 @@
 			// AModify_TextB_Passwd
 			// 
 			this.AModify_TextB_Passwd.Location = new System.Drawing.Point(197, 418);
-			this.AModify_TextB_Passwd.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+			this.AModify_TextB_Passwd.Margin = new System.Windows.Forms.Padding(6);
 			this.AModify_TextB_Passwd.Name = "AModify_TextB_Passwd";
 			this.AModify_TextB_Passwd.Size = new System.Drawing.Size(182, 35);
 			this.AModify_TextB_Passwd.TabIndex = 21;
@@ -109,7 +109,7 @@
 			// AModify_TextB_Id
 			// 
 			this.AModify_TextB_Id.Location = new System.Drawing.Point(197, 336);
-			this.AModify_TextB_Id.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+			this.AModify_TextB_Id.Margin = new System.Windows.Forms.Padding(6);
 			this.AModify_TextB_Id.Name = "AModify_TextB_Id";
 			this.AModify_TextB_Id.Size = new System.Drawing.Size(182, 35);
 			this.AModify_TextB_Id.TabIndex = 19;
@@ -128,7 +128,7 @@
 			// AModify_TextB_Pname
 			// 
 			this.AModify_TextB_Pname.Location = new System.Drawing.Point(197, 252);
-			this.AModify_TextB_Pname.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+			this.AModify_TextB_Pname.Margin = new System.Windows.Forms.Padding(6);
 			this.AModify_TextB_Pname.Name = "AModify_TextB_Pname";
 			this.AModify_TextB_Pname.Size = new System.Drawing.Size(182, 35);
 			this.AModify_TextB_Pname.TabIndex = 17;
@@ -147,7 +147,7 @@
 			// AModify_TextB_Birth
 			// 
 			this.AModify_TextB_Birth.Location = new System.Drawing.Point(197, 124);
-			this.AModify_TextB_Birth.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+			this.AModify_TextB_Birth.Margin = new System.Windows.Forms.Padding(6);
 			this.AModify_TextB_Birth.Name = "AModify_TextB_Birth";
 			this.AModify_TextB_Birth.Size = new System.Drawing.Size(182, 35);
 			this.AModify_TextB_Birth.TabIndex = 15;
@@ -166,7 +166,7 @@
 			// AModify_TextB_Sname
 			// 
 			this.AModify_TextB_Sname.Location = new System.Drawing.Point(197, 42);
-			this.AModify_TextB_Sname.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+			this.AModify_TextB_Sname.Margin = new System.Windows.Forms.Padding(6);
 			this.AModify_TextB_Sname.Name = "AModify_TextB_Sname";
 			this.AModify_TextB_Sname.Size = new System.Drawing.Size(182, 35);
 			this.AModify_TextB_Sname.TabIndex = 13;
@@ -198,9 +198,10 @@
 			this.Controls.Add(this.AModify_TextB_Birth);
 			this.Controls.Add(this.AModify_Label_Sname);
 			this.Controls.Add(this.AModify_TextB_Sname);
-			this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+			this.Margin = new System.Windows.Forms.Padding(6);
 			this.Name = "Admin_Form_Modify";
 			this.Text = "정보 수정";
+			this.Load += new System.EventHandler(this.Admin_Form_Modify_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

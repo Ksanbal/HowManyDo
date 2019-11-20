@@ -36,7 +36,7 @@ namespace HowManyDo
 		// Account폴더에서 입력한 ID와 같은 파일을 찾아 비밀번호가 맞는지 확인하고, 계정정보를 반환하는 메소드
 		private void LoginCheck(string InputId, string InputPasswd)
 		{
-			string AccountPath = @"D:\HG\Programing\HowManyDo\HowManyDo\HowManyDo\bin\Accounts"; //계정이 들어있는 폴더 경로
+			string AccountPath = @"Accounts"; //계정이 들어있는 폴더 경로
 																								 // Account폴더에서 입력한 ID와 같은 파일을 검색
 			DirectoryInfo DI = new DirectoryInfo(AccountPath);
 			string RightId = "";

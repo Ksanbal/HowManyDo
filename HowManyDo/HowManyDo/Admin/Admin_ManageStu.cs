@@ -34,8 +34,7 @@ namespace HowManyDo.Admin
 		{
 			Admin_Form_Modify modify = new Admin_Form_Modify();
 			// 선택된 아이템의 3번째 서브 아이템의 텍스트(아이디)
-			//modify.Setid = AManage_ListV_List.SelectedItems[0].SubItems[2].Text;
-			modify.Setid = AManage_ListV_List.FocusedItem.SubItems[3].Text;
+			modify.Selectedid = AManage_ListV_List.FocusedItem.SubItems[3].Text;
 			modify.ShowDialog();
 			SetzlistView(); // 리스트뷰 내용을 업데이트
 		}
@@ -61,7 +60,7 @@ namespace HowManyDo.Admin
 			AManage_ListV_List.Items.Clear();
 
 			//계정들이 저장된 경로
-			string accountpath = @"D:\HG\Programing\HowManyDo\HowManyDo\HowManyDo\bin\Accounts";
+			string accountpath = "Accounts";
 
 			//경로에 존재하는 파일들을 리스트로 받아온다
 			DirectoryInfo di = new DirectoryInfo(accountpath);
@@ -83,6 +82,7 @@ namespace HowManyDo.Admin
 				listviewitem.SubItems.Add(sr.ReadLine());
 
 				AManage_ListV_List.Items.Add(listviewitem);
+				sr.Close();
 			}
 		} //SetzlistView
 

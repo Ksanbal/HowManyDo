@@ -59,7 +59,7 @@ namespace HowManyDo.Admin
 			string[] account = { sname, birth, pname, id, passwd, permission};
 
 			// 같은 아이디가 있는지 확인
-			DirectoryInfo di = new DirectoryInfo(@"D:\HG\Programing\HowManyDo\HowManyDo\HowManyDo\bin\Accounts");
+			DirectoryInfo di = new DirectoryInfo("Accounts");
 			foreach(var item in di.GetFiles())
 			{
 				if(item.Name == id+".txt")
@@ -70,7 +70,7 @@ namespace HowManyDo.Admin
 			}
 
 			// 학생 정보가 담긴 파일을 새로 작성
-			StreamWriter sw = new StreamWriter(@"D:\HG\Programing\HowManyDo\HowManyDo\HowManyDo\bin\Accounts\" + id + ".txt");
+			StreamWriter sw = new StreamWriter(@"Accounts\" + id + ".txt");
 			
 			foreach(string i in account)
 			{
@@ -80,6 +80,6 @@ namespace HowManyDo.Admin
 
 			MessageBox.Show("학생 등록이 완료되었습니다.");
 			Close();
-			}
+		} // RegistNewAccount()
 	}
 }

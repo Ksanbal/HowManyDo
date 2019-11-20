@@ -88,7 +88,7 @@ namespace HowManyDo.Admin
 		private void SaveWrite(string name, string date,string body, string image)
 		{
 			// 텍스트 파일 작성
-			StreamWriter sw = new StreamWriter(@"D:\HG\Programing\HowManyDo\HowManyDo\HowManyDo\bin\Write\"+date+"_"+name+@".txt");
+			StreamWriter sw = new StreamWriter(@"Write\"+date+"_"+name+@".txt");
 			sw.WriteLine(name, Encoding.Default);
 			sw.WriteLine(date, Encoding.Default);
 			sw.WriteLine(body, Encoding.Default);
@@ -97,7 +97,7 @@ namespace HowManyDo.Admin
 
 			// 사진을 Write폴더로 복사
 			FileInfo fi = new FileInfo(image);
-			fi.CopyTo(@"D:\HG\Programing\HowManyDo\HowManyDo\HowManyDo\bin\Write\"+date+"_"+name+".jpg", true);
+			fi.CopyTo(@"Write\"+date+"_"+name+".jpg", true);
 		}
 	}
 }

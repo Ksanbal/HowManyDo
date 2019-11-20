@@ -14,19 +14,20 @@ namespace HowManyDo.Admin
 {
 	public partial class Admin_Form_Modify : Form
 	{
+		string selectedid;
+		// 선택된 아이템의 아이디를 받아오는 프로퍼티
+		public string Selectedid
+		{
+			set { selectedid = value; }
+		}
+
 		public Admin_Form_Modify()
 		{
 			InitializeComponent();
 			SetTextBoxs(selectedid);
-			label1.Text = selectedid;
 		}
 
-		private string selectedid;
-		// 선택된 아이템의 아이디를 받아오는 프로퍼티
-		public string Setid
-		{
-			set { selectedid = value.ToString(); }
-		}
+		
 
 		private void AModify_Btn_Ok_Click(object sender, EventArgs e)
 		{
@@ -48,18 +49,22 @@ namespace HowManyDo.Admin
 		// 선택된 아이템의 정보로 텍스트박스를 채워주는 메소드
 		private void SetTextBoxs(string selectedid)
 		{
-			string selectedaccount = "";
+			string selectedaccount = string.Empty;
 			List<string> accountinfo = new List<string>();
 
 			// 디렉토리에서 선택된 계정과 같은 계정 정보 가져오기
 			DirectoryInfo di = new DirectoryInfo(@"D:\HG\Programing\HowManyDo\HowManyDo\HowManyDo\bin\Accounts");
-			foreach(var item in di.GetFiles())
+			/*
+			foreach (var item in di.GetFiles())
 			{
 				if(item.Name == selectedid)
 				{
-					selectedaccount = @"D:\HG\Programing\HowManyDo\HowManyDo\HowManyDo\bin\Accounts\" + item.Name;
+					selectedaccount = @"D:\HG\Programing\HowManyDo\HowManyDo\HowManyDo\bin\Accounts\" + selectedid;
 				}
 			}
+			*/
+
+			selectedaccount = @"D:\HG\Programing\HowManyDo\HowManyDo\HowManyDo\bin\Accounts\" + selectedid + ".txt";
 
 			// 가져온 계정 정보를 텍스트 박스 텍스트에 입력
 			StreamReader sr = new StreamReader(selectedaccount);

@@ -22,9 +22,12 @@ namespace HowManyDo.Admin
 
 		private void ARegist_Btn_Ok_Click(object sender, EventArgs e)
 		{
-			// TextBox중 하나라도 비어 있는 경우
-			if(ARegist_TextB_Sname.Text == "" || ARegist_TextB_Birth.Text == "" || ARegist_TextB_Pname.Text == "" || 
-				ARegist_TextB_Id.Text == "" || ARegist_TextB_Passwd.Text == "")
+			if (ARegist_TextB_Id.Text == "")
+			{
+				MessageBox.Show("아이디를 작성해주시기 바랍니다.");
+			} // 아이디가 비어져있는 경우 
+			else if (ARegist_TextB_Sname.Text == "" || ARegist_TextB_Birth.Text == "" || ARegist_TextB_Pname.Text == "" || 
+				ARegist_TextB_Passwd.Text == "")
 			{
 				if(MessageBox.Show("아직 채워지지 않은 칸이 있습니다. 정말 등록하시겠습니까?","",MessageBoxButtons.YesNo)==DialogResult.Yes)
 				{
@@ -32,9 +35,7 @@ namespace HowManyDo.Admin
 					RegistNewAccount(ARegist_TextB_Sname.Text, ARegist_TextB_Birth.Text, ARegist_TextB_Pname.Text,
 						ARegist_TextB_Id.Text, ARegist_TextB_Passwd.Text, "user");
 				}
-				else
-				{ }
-			}
+			} // TextBox중 하나라도 비어 있는 경우
 			else
 			{
 				// 등록 기능 구현

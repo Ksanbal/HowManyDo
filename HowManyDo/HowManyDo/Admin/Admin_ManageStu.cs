@@ -17,7 +17,7 @@ namespace HowManyDo.Admin
 		public Admin_Form_ManageStu()
 		{
 			InitializeComponent();
-			SetzlistView(); // 리스트뷰 내용을 업데이트
+			SetlistView(); // 리스트뷰 내용을 업데이트
 		}
 
 
@@ -25,7 +25,7 @@ namespace HowManyDo.Admin
 		{
 			Admin_Form_Regist regist = new Admin_Form_Regist();
 			regist.ShowDialog();
-			SetzlistView(); // 리스트뷰 내용을 업데이트
+			SetlistView(); // 리스트뷰 내용을 업데이트
 		}
 
 
@@ -36,7 +36,7 @@ namespace HowManyDo.Admin
 			// 선택된 아이템의 3번째 서브 아이템의 텍스트(아이디)
 			modify.Selectedid = AManage_ListV_List.FocusedItem.SubItems[3].Text;
 			modify.ShowDialog();
-			SetzlistView(); // 리스트뷰 내용을 업데이트
+			SetlistView(); // 리스트뷰 내용을 업데이트
 		}
 
 
@@ -44,6 +44,9 @@ namespace HowManyDo.Admin
 		{
 			// 선택된 아이템의 3번째 서브 아이템의 텍스트(아이디)
 			// modify.Setid = AManage_ListV_List.SelectedItems[0].SubItems[0].Text;
+			DeleteList(AManage_ListV_List.SelectedItems[0].SubItems[0].Text, 
+				AManage_ListV_List.SelectedItems[0].SubItems[3].Text);
+			SetlistView();
 		}
 
 
@@ -54,7 +57,7 @@ namespace HowManyDo.Admin
 
 
 		//메소드
-		private void SetzlistView()
+		private void SetlistView()
 		{
 			//리스트 정보를 클리어
 			AManage_ListV_List.Items.Clear();
@@ -85,6 +88,18 @@ namespace HowManyDo.Admin
 				sr.Close();
 			}
 		} //SetzlistView
+
+		// 선택한 리스트의 파일을 삭제하는 메소드
+		private void DeleteList(string sname, string id)
+		{
+			if(MessageBox.Show(sname + "의 정보를 정말 삭제하시겠습니까?","주의",MessageBoxButtons.YesNo) == DialogResult.Yes)
+			{
+				FileInfo fi = new FileInfo(@"Accounts\" + id + ".txt");
+				fi.Delete();
+			}
+		} // DeleteList()
+
+
 
 	}
 }

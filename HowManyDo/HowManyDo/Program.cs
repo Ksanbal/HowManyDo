@@ -19,8 +19,8 @@ namespace HowManyDo
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Main_Form_Index());
-			//Application.Run(new Admin_Form_ManageStu());
+			//Application.Run(new Main_Form_Index());
+			Application.Run(new Admin_Form_ManageStu());
 		}
 	}
 }

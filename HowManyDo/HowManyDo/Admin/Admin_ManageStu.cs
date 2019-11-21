@@ -32,21 +32,35 @@ namespace HowManyDo.Admin
 
 		private void AManage_Btn_Modify_Click(object sender, EventArgs e)
 		{
-			Admin_Form_Modify modify = new Admin_Form_Modify();
-			// 선택된 아이템의 3번째 서브 아이템의 텍스트(아이디)
-			modify.Selectedid = AManage_ListV_List.FocusedItem.SubItems[3].Text;
-			modify.ShowDialog();
-			SetlistView(); // 리스트뷰 내용을 업데이트
+			try
+			{
+				Admin_Form_Modify modify = new Admin_Form_Modify();
+				// 선택된 아이템의 3번째 서브 아이템의 텍스트(아이디)
+				modify.Selectedid = AManage_ListV_List.SelectedItems[0].SubItems[3].Text;
+				modify.ShowDialog();
+				SetlistView(); // 리스트뷰 내용을 업데이트
+			}
+			catch(ArgumentOutOfRangeException)
+			{
+				MessageBox.Show("원생이 선택되지 않았습니다.");
+			}
 		}
 
 
 		private void AManage_Btn_Delete_Click(object sender, EventArgs e)
 		{
 			// 선택된 아이템의 3번째 서브 아이템의 텍스트(아이디)
-			// modify.Setid = AManage_ListV_List.SelectedItems[0].SubItems[0].Text;
-			DeleteList(AManage_ListV_List.SelectedItems[0].SubItems[0].Text, 
-				AManage_ListV_List.SelectedItems[0].SubItems[3].Text);
-			SetlistView();
+
+			try
+			{
+				DeleteList(AManage_ListV_List.SelectedItems[0].SubItems[0].Text,
+					AManage_ListV_List.SelectedItems[0].SubItems[3].Text);
+				SetlistView();
+			}
+			catch (ArgumentOutOfRangeException)
+			{
+				MessageBox.Show("원생이 선택되지 않았습니다.");
+			}
 		}
 
 
@@ -96,6 +110,7 @@ namespace HowManyDo.Admin
 			{
 				FileInfo fi = new FileInfo(@"Accounts\" + id + ".txt");
 				fi.Delete();
+				MessageBox.Show("정상적으로 삭제되었습니다.");
 			}
 		} // DeleteList()
 

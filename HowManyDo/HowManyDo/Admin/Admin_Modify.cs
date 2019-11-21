@@ -36,6 +36,8 @@ namespace HowManyDo.Admin
 
 		private void AModify_Btn_Ok_Click(object sender, EventArgs e)
 		{
+			MessageBox.Show("Bug로 인해 잠시 이용이 불가합니다.");
+			/*
 			// TextBox중 하나라도 비어 있는 경우
 			if (AModify_TextB_Sname.Text == "" || AModify_TextB_Birth.Text == "" || AModify_TextB_Pname.Text == "" ||
 				AModify_TextB_Id.Text == "" || AModify_TextB_Passwd.Text == "")
@@ -55,6 +57,7 @@ namespace HowManyDo.Admin
 				ModifyAccount(AModify_TextB_Sname.Text, AModify_TextB_Birth.Text, AModify_TextB_Pname.Text,
 					AModify_TextB_Id.Text, AModify_TextB_Passwd.Text, "user", selectedid);
 			}
+			*/
 		}
 
 		private void AModify_Btn_Cancel_Click(object sender, EventArgs e)
@@ -77,15 +80,6 @@ namespace HowManyDo.Admin
 
 			// 디렉토리에서 선택된 계정과 같은 계정 정보 가져오기
 			DirectoryInfo di = new DirectoryInfo("Accounts");
-			/*
-			foreach (var item in di.GetFiles())
-			{
-				if(item.Name == selectedid)
-				{
-					selectedaccount = @"D:\HG\Programing\HowManyDo\HowManyDo\HowManyDo\bin\Accounts\" + selectedid;
-				}
-			}
-			*/
 
 			selectedaccount = @"Accounts\" + id + ".txt";
 
@@ -106,6 +100,7 @@ namespace HowManyDo.Admin
 
 
 		//계정 정보를 갱신해주는 메소드
+		//Bug :  원래의 파일에 접근할 수 없는 문제
 		private void ModifyAccount(string sname, string birth, string pname, string id, string passwd, string permission, string originid)
 		{
 			string[] account = { sname, birth, pname, id, passwd, permission };
@@ -123,16 +118,22 @@ namespace HowManyDo.Admin
 
 			// 학생 정보가 담긴 파일을 덮어쓰기
 			// StreamWriter sw = new StreamWriter(@"Accounts\" + originid + ".txt", true);
-			StreamWriter sw = new StreamWriter(originid + ".txt");
-			FileInfo fi = new FileInfo(originid + ".txt");
+			StreamWriter sw = new StreamWriter(id + ".txt");
+			FileInfo fidelete = new FileInfo(@"Accounts\" + originid + ".txt");
+			FileInfo fimove = new FileInfo(id + ".txt");
 
+			// 원래 파일 삭제
+			//fidelete.Delete();
+
+			//Debug 폴더에 파일 생성
 			foreach (string i in account)
 			{
 				sw.WriteLine(i);
 			}
 			sw.Close();
 
-			
+			// Accounts 폴더로 파일 이동
+			fimove.CopyTo(@"Accounts\"+id+".txt",true);
 
 
 			MessageBox.Show("학생 등록이 완료되었습니다.");

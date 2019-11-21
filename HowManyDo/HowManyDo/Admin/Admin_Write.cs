@@ -21,9 +21,7 @@ namespace HowManyDo.Admin
 
 		// 이미지 경로를 저장해둘 변수
 		private string imagepath;
-
-
-
+		
 		private void AWrite_Btn_SelectPic_Click(object sender, EventArgs e)
 		{
 			imagepath = LoadPic();
@@ -39,16 +37,11 @@ namespace HowManyDo.Admin
 			else
 			{
 				SaveWrite(AWrite_TextB_Name.Text, DateTime.Now.ToString("yyyyMMdd"), AWrite_TextB_Body.Text, imagepath);
+				MessageBox.Show("파일을 작성하였습니다.");
 				Close();
 			}
 		}
 
-
-
-		private void AWrite_Btn_Temp_Click(object sender, EventArgs e)
-		{
-			MessageBox.Show("임시저장");
-		}
 
 
 		private void AWrite_Btn_Cancel_Click(object sender, EventArgs e)
@@ -57,11 +50,11 @@ namespace HowManyDo.Admin
 			{
 				Close();
 			}
-			else
-			{ }
 		}
 
+
 		// 메소드
+		// 사진을 불러오는 메소드
 		private string LoadPic()
 		{
 			// 파일탐색기로 사진을 찾아서 사진 경로 반환
@@ -85,6 +78,7 @@ namespace HowManyDo.Admin
 			return image;
 		} // LoadPic()
 
+		// 텍스트 파일을 작성하는 메소드
 		private void SaveWrite(string name, string date,string body, string image)
 		{
 			// 텍스트 파일 작성

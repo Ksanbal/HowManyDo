@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Form_Write));
 			this.AWrite_TextB_Body = new System.Windows.Forms.TextBox();
 			this.AWrite_Lable_Name = new System.Windows.Forms.Label();
 			this.AWrite_Btn_SelectPic = new System.Windows.Forms.Button();
@@ -35,7 +36,10 @@
 			this.AWrtie_Btn_Send = new System.Windows.Forms.Button();
 			this.AWrite_Btn_Cancel = new System.Windows.Forms.Button();
 			this.AWrite_TextB_Name = new System.Windows.Forms.TextBox();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.AWrite_Label_SearchedName = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.AWrite_Pic_SelectedPic)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// AWrite_TextB_Body
@@ -60,7 +64,7 @@
 			// AWrite_Btn_SelectPic
 			// 
 			this.AWrite_Btn_SelectPic.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.AWrite_Btn_SelectPic.Location = new System.Drawing.Point(348, 95);
+			this.AWrite_Btn_SelectPic.Location = new System.Drawing.Point(348, 188);
 			this.AWrite_Btn_SelectPic.Name = "AWrite_Btn_SelectPic";
 			this.AWrite_Btn_SelectPic.Size = new System.Drawing.Size(139, 23);
 			this.AWrite_Btn_SelectPic.TabIndex = 3;
@@ -70,8 +74,9 @@
 			// 
 			// AWrite_Pic_SelectedPic
 			// 
+			this.AWrite_Pic_SelectedPic.BackColor = System.Drawing.SystemColors.ControlLightLight;
 			this.AWrite_Pic_SelectedPic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-			this.AWrite_Pic_SelectedPic.Location = new System.Drawing.Point(348, 124);
+			this.AWrite_Pic_SelectedPic.Location = new System.Drawing.Point(348, 217);
 			this.AWrite_Pic_SelectedPic.Name = "AWrite_Pic_SelectedPic";
 			this.AWrite_Pic_SelectedPic.Size = new System.Drawing.Size(138, 90);
 			this.AWrite_Pic_SelectedPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -104,17 +109,40 @@
 			// AWrite_TextB_Name
 			// 
 			this.AWrite_TextB_Name.Location = new System.Drawing.Point(348, 42);
-			this.AWrite_TextB_Name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-			this.AWrite_TextB_Name.Multiline = true;
+			this.AWrite_TextB_Name.Margin = new System.Windows.Forms.Padding(2);
 			this.AWrite_TextB_Name.Name = "AWrite_TextB_Name";
-			this.AWrite_TextB_Name.Size = new System.Drawing.Size(139, 34);
+			this.AWrite_TextB_Name.Size = new System.Drawing.Size(114, 21);
 			this.AWrite_TextB_Name.TabIndex = 8;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Location = new System.Drawing.Point(467, 42);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(19, 21);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.TabIndex = 9;
+			this.pictureBox1.TabStop = false;
+			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+			// 
+			// AWrite_Label_SearchedName
+			// 
+			this.AWrite_Label_SearchedName.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.AWrite_Label_SearchedName.Location = new System.Drawing.Point(348, 66);
+			this.AWrite_Label_SearchedName.Name = "AWrite_Label_SearchedName";
+			this.AWrite_Label_SearchedName.Size = new System.Drawing.Size(138, 23);
+			this.AWrite_Label_SearchedName.TabIndex = 10;
+			this.AWrite_Label_SearchedName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// Admin_Form_Write
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(495, 450);
+			this.Controls.Add(this.AWrite_Label_SearchedName);
+			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.AWrite_TextB_Name);
 			this.Controls.Add(this.AWrite_Btn_Cancel);
 			this.Controls.Add(this.AWrtie_Btn_Send);
@@ -125,6 +153,7 @@
 			this.Name = "Admin_Form_Write";
 			this.Text = "글작성";
 			((System.ComponentModel.ISupportInitialize)(this.AWrite_Pic_SelectedPic)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -139,5 +168,7 @@
 		private System.Windows.Forms.Button AWrtie_Btn_Send;
 		private System.Windows.Forms.Button AWrite_Btn_Cancel;
 		private System.Windows.Forms.TextBox AWrite_TextB_Name;
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.Label AWrite_Label_SearchedName;
 	}
 }

@@ -71,6 +71,7 @@ namespace HowManyDo.Admin
 
 
 		//메소드
+		// 리스트의 정보를 초기화하고 리프레쉬 시키는 메소드
 		private void SetlistView()
 		{
 			//리스트 정보를 클리어

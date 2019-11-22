@@ -30,10 +30,10 @@
 		{
 			this.CheckLog_Btn_Cancel = new System.Windows.Forms.Button();
 			this.CheckLog_Pic_SelectedPic = new System.Windows.Forms.PictureBox();
-			this.CheckLog_TextB_Body = new System.Windows.Forms.TextBox();
 			this.CheckLog_Label_Title = new System.Windows.Forms.Label();
 			this.CheckLog_Label_Sname = new System.Windows.Forms.Label();
 			this.CheckLog_Label_Date = new System.Windows.Forms.Label();
+			this.CheckLog_Label_Body = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.CheckLog_Pic_SelectedPic)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -44,7 +44,7 @@
 			this.CheckLog_Btn_Cancel.Name = "CheckLog_Btn_Cancel";
 			this.CheckLog_Btn_Cancel.Size = new System.Drawing.Size(138, 53);
 			this.CheckLog_Btn_Cancel.TabIndex = 12;
-			this.CheckLog_Btn_Cancel.Text = "취소";
+			this.CheckLog_Btn_Cancel.Text = "나가기";
 			this.CheckLog_Btn_Cancel.UseVisualStyleBackColor = true;
 			this.CheckLog_Btn_Cancel.Click += new System.EventHandler(this.CheckLog_Btn_Cancel_Click);
 			// 
@@ -57,14 +57,6 @@
 			this.CheckLog_Pic_SelectedPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.CheckLog_Pic_SelectedPic.TabIndex = 11;
 			this.CheckLog_Pic_SelectedPic.TabStop = false;
-			// 
-			// CheckLog_TextB_Body
-			// 
-			this.CheckLog_TextB_Body.Location = new System.Drawing.Point(11, 13);
-			this.CheckLog_TextB_Body.Multiline = true;
-			this.CheckLog_TextB_Body.Name = "CheckLog_TextB_Body";
-			this.CheckLog_TextB_Body.Size = new System.Drawing.Size(328, 425);
-			this.CheckLog_TextB_Body.TabIndex = 9;
 			// 
 			// CheckLog_Label_Title
 			// 
@@ -97,22 +89,32 @@
 			this.CheckLog_Label_Date.Text = "2019. 11. 10";
 			this.CheckLog_Label_Date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
+			// CheckLog_Label_Body
+			// 
+			this.CheckLog_Label_Body.BackColor = System.Drawing.SystemColors.ControlLightLight;
+			this.CheckLog_Label_Body.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+			this.CheckLog_Label_Body.Location = new System.Drawing.Point(11, 13);
+			this.CheckLog_Label_Body.Name = "CheckLog_Label_Body";
+			this.CheckLog_Label_Body.Size = new System.Drawing.Size(328, 425);
+			this.CheckLog_Label_Body.TabIndex = 16;
+			this.CheckLog_Label_Body.Text = "label1";
+			// 
 			// Form_CheckLog
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(495, 450);
+			this.Controls.Add(this.CheckLog_Label_Body);
 			this.Controls.Add(this.CheckLog_Label_Date);
 			this.Controls.Add(this.CheckLog_Label_Sname);
 			this.Controls.Add(this.CheckLog_Btn_Cancel);
 			this.Controls.Add(this.CheckLog_Pic_SelectedPic);
-			this.Controls.Add(this.CheckLog_TextB_Body);
 			this.Controls.Add(this.CheckLog_Label_Title);
 			this.Name = "Form_CheckLog";
 			this.Text = "글 확인하기";
+			this.Load += new System.EventHandler(this.Form_CheckLog_Load);
 			((System.ComponentModel.ISupportInitialize)(this.CheckLog_Pic_SelectedPic)).EndInit();
 			this.ResumeLayout(false);
-			this.PerformLayout();
 
 		}
 
@@ -120,9 +122,9 @@
 
 		private System.Windows.Forms.Button CheckLog_Btn_Cancel;
 		private System.Windows.Forms.PictureBox CheckLog_Pic_SelectedPic;
-		private System.Windows.Forms.TextBox CheckLog_TextB_Body;
 		private System.Windows.Forms.Label CheckLog_Label_Title;
 		private System.Windows.Forms.Label CheckLog_Label_Sname;
 		private System.Windows.Forms.Label CheckLog_Label_Date;
+		private System.Windows.Forms.Label CheckLog_Label_Body;
 	}
 }

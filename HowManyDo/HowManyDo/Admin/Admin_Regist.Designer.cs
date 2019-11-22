@@ -134,6 +134,7 @@
 			// ARegist_ProgressBar
 			// 
 			this.ARegist_ProgressBar.Location = new System.Drawing.Point(229, 21);
+			this.ARegist_ProgressBar.Maximum = 4;
 			this.ARegist_ProgressBar.Name = "ARegist_ProgressBar";
 			this.ARegist_ProgressBar.Size = new System.Drawing.Size(155, 21);
 			this.ARegist_ProgressBar.TabIndex = 12;

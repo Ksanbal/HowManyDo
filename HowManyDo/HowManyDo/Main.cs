@@ -37,7 +37,7 @@ namespace HowManyDo
 		private void LoginCheck(string InputId, string InputPasswd)
 		{
 			string AccountPath = @"Accounts"; //계정이 들어있는 폴더 경로
-																								 // Account폴더에서 입력한 ID와 같은 파일을 검색
+			// Account폴더에서 입력한 ID와 같은 파일을 검색
 			DirectoryInfo DI = new DirectoryInfo(AccountPath);
 			string RightId = "";
 
@@ -78,25 +78,26 @@ namespace HowManyDo
 						Admin_Form_Main adminform = new Admin_Form_Main();
 						adminform.SetUsername = account[2]; // 학부모이름을 프로퍼티로 입력
 						adminform.Show();
-						DisableForm();
-					}
-					else if (account[5] == "user")
-					{
-						User_Form_Main userform = new User_Form_Main();
-						userform.SetUsername = account[2]; // 학부모이름을 프로퍼티로 입력
-						userform.Show();
+
 						DisableForm();
 					}
 				}
 			}
 		} //LoginCheck
 
+
+		private void Main_Form_Index_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			Application.Exit();
+		}
+
 		//부모폼을 숨기기 위해 부모폼을 비활성화하고 숨기는 메소드
-		private void DisableForm()
+		public void DisableForm()
 		{
 			this.Enabled = false;
 			this.ShowInTaskbar = false;
 			this.Opacity = 0;
 		} //DisableForm
+
 	}
 }

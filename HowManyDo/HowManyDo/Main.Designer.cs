@@ -144,6 +144,7 @@
 			this.Controls.Add(this.Main_Lable_Title);
 			this.Name = "Main_Form_Index";
 			this.Text = "HowManyDo 애플미술";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_Form_Index_FormClosed);
 			((System.ComponentModel.ISupportInitialize)(this.Main_Pic_Logo)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();

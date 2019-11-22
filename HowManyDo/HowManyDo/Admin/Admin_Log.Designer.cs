@@ -29,18 +29,15 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "test",
-            "날짜",
-            "본문"}, -1);
 			this.ALog_ListV_List = new System.Windows.Forms.ListView();
-			this.ALog_Btn_Cancel = new System.Windows.Forms.Button();
 			this.name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.body = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.ALog_imageList = new System.Windows.Forms.ImageList(this.components);
+			this.ALog_Btn_Cancel = new System.Windows.Forms.Button();
 			this.ALog_ComboBox = new System.Windows.Forms.ComboBox();
 			this.ALog_Btn_ShowDetail = new System.Windows.Forms.Button();
+			this.label1 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// ALog_ListV_List
@@ -50,8 +47,6 @@
             this.date,
             this.body});
 			this.ALog_ListV_List.HideSelection = false;
-			this.ALog_ListV_List.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
 			this.ALog_ListV_List.LargeImageList = this.ALog_imageList;
 			this.ALog_ListV_List.Location = new System.Drawing.Point(13, 13);
 			this.ALog_ListV_List.Name = "ALog_ListV_List";
@@ -60,17 +55,6 @@
 			this.ALog_ListV_List.TabIndex = 0;
 			this.ALog_ListV_List.UseCompatibleStateImageBehavior = false;
 			this.ALog_ListV_List.View = System.Windows.Forms.View.Details;
-			// 
-			// ALog_Btn_Cancel
-			// 
-			this.ALog_Btn_Cancel.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.ALog_Btn_Cancel.Location = new System.Drawing.Point(347, 385);
-			this.ALog_Btn_Cancel.Name = "ALog_Btn_Cancel";
-			this.ALog_Btn_Cancel.Size = new System.Drawing.Size(138, 53);
-			this.ALog_Btn_Cancel.TabIndex = 2;
-			this.ALog_Btn_Cancel.Text = "나가기";
-			this.ALog_Btn_Cancel.UseVisualStyleBackColor = true;
-			this.ALog_Btn_Cancel.Click += new System.EventHandler(this.ALog_Btn_Cancel_Click);
 			// 
 			// name
 			// 
@@ -92,6 +76,17 @@
 			this.ALog_imageList.ImageSize = new System.Drawing.Size(16, 16);
 			this.ALog_imageList.TransparentColor = System.Drawing.Color.Transparent;
 			// 
+			// ALog_Btn_Cancel
+			// 
+			this.ALog_Btn_Cancel.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.ALog_Btn_Cancel.Location = new System.Drawing.Point(347, 385);
+			this.ALog_Btn_Cancel.Name = "ALog_Btn_Cancel";
+			this.ALog_Btn_Cancel.Size = new System.Drawing.Size(138, 53);
+			this.ALog_Btn_Cancel.TabIndex = 2;
+			this.ALog_Btn_Cancel.Text = "나가기";
+			this.ALog_Btn_Cancel.UseVisualStyleBackColor = true;
+			this.ALog_Btn_Cancel.Click += new System.EventHandler(this.ALog_Btn_Cancel_Click);
+			// 
 			// ALog_ComboBox
 			// 
 			this.ALog_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -102,7 +97,7 @@
             "Small icon",
             "List",
             "Tile"});
-			this.ALog_ComboBox.Location = new System.Drawing.Point(348, 13);
+			this.ALog_ComboBox.Location = new System.Drawing.Point(348, 56);
 			this.ALog_ComboBox.Name = "ALog_ComboBox";
 			this.ALog_ComboBox.Size = new System.Drawing.Size(137, 20);
 			this.ALog_ComboBox.TabIndex = 3;
@@ -119,12 +114,23 @@
 			this.ALog_Btn_ShowDetail.UseVisualStyleBackColor = true;
 			this.ALog_Btn_ShowDetail.Click += new System.EventHandler(this.ALog_Btn_ShowDetail_Click);
 			// 
+			// label1
+			// 
+			this.label1.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+			this.label1.Location = new System.Drawing.Point(348, 13);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(137, 27);
+			this.label1.TabIndex = 5;
+			this.label1.Text = "보기 설정";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
 			// Admin_Form_Log
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.ClientSize = new System.Drawing.Size(495, 450);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.ALog_Btn_ShowDetail);
 			this.Controls.Add(this.ALog_ComboBox);
 			this.Controls.Add(this.ALog_Btn_Cancel);
@@ -145,5 +151,6 @@
 		private System.Windows.Forms.ImageList ALog_imageList;
 		private System.Windows.Forms.ComboBox ALog_ComboBox;
 		private System.Windows.Forms.Button ALog_Btn_ShowDetail;
+		private System.Windows.Forms.Label label1;
 	}
 }

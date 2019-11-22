@@ -73,9 +73,6 @@ namespace HowManyDo.Admin
 		// list창을 채워주는 메소드
 		private void SetListView()
 		{
-			// 리스트 정보를 클리어
-			//ALog_ListV_List.Clear();
-
 			// 글이 저장된 경로
 			string writepath = "Write";
 			

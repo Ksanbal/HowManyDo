@@ -37,7 +37,12 @@
 			this.Admin_Pic_Logo = new System.Windows.Forms.PictureBox();
 			this.Admin_Label_Welcome = new System.Windows.Forms.Label();
 			this.Admin_Label_Title = new System.Windows.Forms.Label();
+			this.Admin_MenuStrip = new System.Windows.Forms.MenuStrip();
+			this.Admin_quitbtn = new System.Windows.Forms.ToolStripMenuItem();
+			this.logout = new System.Windows.Forms.ToolStripMenuItem();
+			this.exit = new System.Windows.Forms.ToolStripMenuItem();
 			((System.ComponentModel.ISupportInitialize)(this.Admin_Pic_Logo)).BeginInit();
+			this.Admin_MenuStrip.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// Admin_Btn_Write
@@ -123,6 +128,39 @@
 			this.Admin_Label_Title.Text = "How Many Do";
 			this.Admin_Label_Title.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
+			// Admin_MenuStrip
+			// 
+			this.Admin_MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Admin_quitbtn});
+			this.Admin_MenuStrip.Location = new System.Drawing.Point(0, 0);
+			this.Admin_MenuStrip.Name = "Admin_MenuStrip";
+			this.Admin_MenuStrip.Size = new System.Drawing.Size(517, 24);
+			this.Admin_MenuStrip.TabIndex = 8;
+			this.Admin_MenuStrip.Text = "메뉴창";
+			// 
+			// Admin_quitbtn
+			// 
+			this.Admin_quitbtn.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logout,
+            this.exit});
+			this.Admin_quitbtn.Image = ((System.Drawing.Image)(resources.GetObject("Admin_quitbtn.Image")));
+			this.Admin_quitbtn.Name = "Admin_quitbtn";
+			this.Admin_quitbtn.Size = new System.Drawing.Size(28, 20);
+			// 
+			// logout
+			// 
+			this.logout.Name = "logout";
+			this.logout.Size = new System.Drawing.Size(122, 22);
+			this.logout.Text = "로그아웃";
+			this.logout.Click += new System.EventHandler(this.logout_Click);
+			// 
+			// exit
+			// 
+			this.exit.Name = "exit";
+			this.exit.Size = new System.Drawing.Size(122, 22);
+			this.exit.Text = "종료";
+			this.exit.Click += new System.EventHandler(this.exit_Click);
+			// 
 			// Admin_Form_Main
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -136,11 +174,16 @@
 			this.Controls.Add(this.Admin_Btn_Manage);
 			this.Controls.Add(this.Admin_Btn_Log);
 			this.Controls.Add(this.Admin_Btn_Write);
+			this.Controls.Add(this.Admin_MenuStrip);
+			this.MainMenuStrip = this.Admin_MenuStrip;
 			this.Name = "Admin_Form_Main";
 			this.Text = "HowManyDo 관리자";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Admin_Form_Main_FormClosing);
 			((System.ComponentModel.ISupportInitialize)(this.Admin_Pic_Logo)).EndInit();
+			this.Admin_MenuStrip.ResumeLayout(false);
+			this.Admin_MenuStrip.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -154,5 +197,9 @@
 		private System.Windows.Forms.PictureBox Admin_Pic_Logo;
 		private System.Windows.Forms.Label Admin_Label_Welcome;
 		private System.Windows.Forms.Label Admin_Label_Title;
+		private System.Windows.Forms.MenuStrip Admin_MenuStrip;
+		private System.Windows.Forms.ToolStripMenuItem Admin_quitbtn;
+		private System.Windows.Forms.ToolStripMenuItem logout;
+		private System.Windows.Forms.ToolStripMenuItem exit;
 	}
 }

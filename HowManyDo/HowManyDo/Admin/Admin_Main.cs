@@ -61,5 +61,26 @@ namespace HowManyDo.Admin
 			Admin_Form_ManageStu ManageStu = new Admin_Form_ManageStu();
 			ManageStu.ShowDialog();
 		}
+
+
+		private void logout_Click(object sender, EventArgs e)
+		{
+			Main_Form_Index mainform = new Main_Form_Index();
+			DisableForm();
+			mainform.ShowDialog();
+		}
+
+		private void exit_Click(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
+
+		public void DisableForm()
+		{
+			this.Enabled = false;
+			this.ShowInTaskbar = false;
+			this.Opacity = 0;
+		} //DisableForm
+
 	}
 }

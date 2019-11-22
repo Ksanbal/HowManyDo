@@ -84,7 +84,7 @@ namespace HowManyDo.Admin
 			selectedaccount = @"Accounts\" + id + ".txt";
 
 			// 가져온 계정 정보를 텍스트 박스 텍스트에 입력
-			StreamReader sr = new StreamReader(selectedaccount);
+			StreamReader sr = new StreamReader(selectedaccount, Encoding.Default);
 
 			for(int i = 0; i < 5; i++)
 			{
@@ -94,22 +94,21 @@ namespace HowManyDo.Admin
 			AModify_TextB_Sname.Text = accountinfo[0];
 			AModify_TextB_Birth.Text = accountinfo[1];
 			AModify_TextB_Pname.Text = accountinfo[2];
-			AModify_TextB_Id.Text = accountinfo[3];
-			AModify_TextB_Passwd.Text = accountinfo[4];
+			AModify_TextB_Email.Text = accountinfo[3];
 		} // SetTextBoxs()
 
 
 		//계정 정보를 갱신해주는 메소드
 		//Bug :  원래의 파일에 접근할 수 없는 문제
-		private void ModifyAccount(string sname, string birth, string pname, string id, string passwd, string permission, string originid)
+		private void ModifyAccount(string sname, string birth, string pname, string email, string permission, string originemail)
 		{
-			string[] account = { sname, birth, pname, id, passwd, permission };
+			string[] account = { sname, birth, pname, email, permission };
 
 			// 같은 아이디가 있는지 확인
 			DirectoryInfo di = new DirectoryInfo("Accounts");
 			foreach (var item in di.GetFiles())
 			{
-				if (item.Name == id + ".txt" && item.Name != originid+".txt")
+				if (item.Name == email + ".txt" && item.Name != originemail + ".txt")
 				{
 					MessageBox.Show("이미 존재하는 아이디입니다.");
 					return;
@@ -118,9 +117,9 @@ namespace HowManyDo.Admin
 
 			// 학생 정보가 담긴 파일을 덮어쓰기
 			// StreamWriter sw = new StreamWriter(@"Accounts\" + originid + ".txt", true);
-			StreamWriter sw = new StreamWriter(id + ".txt");
-			FileInfo fidelete = new FileInfo(@"Accounts\" + originid + ".txt");
-			FileInfo fimove = new FileInfo(id + ".txt");
+			StreamWriter sw = new StreamWriter(email + ".txt");
+			FileInfo fidelete = new FileInfo(@"Accounts\" + originemail + ".txt");
+			FileInfo fimove = new FileInfo(email + ".txt");
 
 			// 원래 파일 삭제
 			//fidelete.Delete();
@@ -133,7 +132,7 @@ namespace HowManyDo.Admin
 			sw.Close();
 
 			// Accounts 폴더로 파일 이동
-			fimove.CopyTo(@"Accounts\"+id+".txt",true);
+			fimove.CopyTo(@"Accounts\"+ email + ".txt",true);
 
 
 			MessageBox.Show("학생 등록이 완료되었습니다.");

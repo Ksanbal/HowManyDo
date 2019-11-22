@@ -20,12 +20,11 @@ namespace HowManyDo.Admin
 			SetListView();
 		}
 
-		// 콤보박스의 내용이 변경될때 리스트뷰의 View를 변경
-		private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
+		private void toolStripComboBox1_TextChanged(object sender, EventArgs e)
 		{
-			switch (ALog_ComboBox.Text)
+			switch (ALog_MenuStrip.Items[0].Text)
 			{
-				case "Large icon":
+				case "Large Icon":
 					ALog_ListV_List.View = View.LargeIcon;
 					break;
 
@@ -33,7 +32,7 @@ namespace HowManyDo.Admin
 					ALog_ListV_List.View = View.Details;
 					break;
 
-				case "Small icon":
+				case "Small Icon":
 					ALog_ListV_List.View = View.SmallIcon;
 					break;
 
@@ -45,7 +44,6 @@ namespace HowManyDo.Admin
 					ALog_ListV_List.View = View.Tile;
 					break;
 			}
-			//SetListView();
 		}
 
 		private void ALog_Btn_ShowDetail_Click(object sender, EventArgs e)

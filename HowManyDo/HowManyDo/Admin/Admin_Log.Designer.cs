@@ -35,9 +35,10 @@
 			this.body = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.ALog_imageList = new System.Windows.Forms.ImageList(this.components);
 			this.ALog_Btn_Cancel = new System.Windows.Forms.Button();
-			this.ALog_ComboBox = new System.Windows.Forms.ComboBox();
 			this.ALog_Btn_ShowDetail = new System.Windows.Forms.Button();
-			this.label1 = new System.Windows.Forms.Label();
+			this.ALog_MenuStrip = new System.Windows.Forms.MenuStrip();
+			this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+			this.ALog_MenuStrip.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// ALog_ListV_List
@@ -48,9 +49,9 @@
             this.body});
 			this.ALog_ListV_List.HideSelection = false;
 			this.ALog_ListV_List.LargeImageList = this.ALog_imageList;
-			this.ALog_ListV_List.Location = new System.Drawing.Point(13, 13);
+			this.ALog_ListV_List.Location = new System.Drawing.Point(13, 27);
 			this.ALog_ListV_List.Name = "ALog_ListV_List";
-			this.ALog_ListV_List.Size = new System.Drawing.Size(328, 425);
+			this.ALog_ListV_List.Size = new System.Drawing.Size(328, 411);
 			this.ALog_ListV_List.SmallImageList = this.ALog_imageList;
 			this.ALog_ListV_List.TabIndex = 0;
 			this.ALog_ListV_List.UseCompatibleStateImageBehavior = false;
@@ -87,22 +88,6 @@
 			this.ALog_Btn_Cancel.UseVisualStyleBackColor = true;
 			this.ALog_Btn_Cancel.Click += new System.EventHandler(this.ALog_Btn_Cancel_Click);
 			// 
-			// ALog_ComboBox
-			// 
-			this.ALog_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.ALog_ComboBox.FormattingEnabled = true;
-			this.ALog_ComboBox.Items.AddRange(new object[] {
-            "Large icon",
-            "Details",
-            "Small icon",
-            "List",
-            "Tile"});
-			this.ALog_ComboBox.Location = new System.Drawing.Point(348, 56);
-			this.ALog_ComboBox.Name = "ALog_ComboBox";
-			this.ALog_ComboBox.Size = new System.Drawing.Size(137, 20);
-			this.ALog_ComboBox.TabIndex = 3;
-			this.ALog_ComboBox.SelectionChangeCommitted += new System.EventHandler(this.comboBox1_SelectionChangeCommitted);
-			// 
 			// ALog_Btn_ShowDetail
 			// 
 			this.ALog_Btn_ShowDetail.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -114,15 +99,30 @@
 			this.ALog_Btn_ShowDetail.UseVisualStyleBackColor = true;
 			this.ALog_Btn_ShowDetail.Click += new System.EventHandler(this.ALog_Btn_ShowDetail_Click);
 			// 
-			// label1
+			// ALog_MenuStrip
 			// 
-			this.label1.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.label1.Location = new System.Drawing.Point(348, 13);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(137, 27);
-			this.label1.TabIndex = 5;
-			this.label1.Text = "보기 설정";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.ALog_MenuStrip.BackColor = System.Drawing.Color.Transparent;
+			this.ALog_MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripComboBox1});
+			this.ALog_MenuStrip.Location = new System.Drawing.Point(0, 0);
+			this.ALog_MenuStrip.Name = "ALog_MenuStrip";
+			this.ALog_MenuStrip.Size = new System.Drawing.Size(495, 27);
+			this.ALog_MenuStrip.TabIndex = 6;
+			this.ALog_MenuStrip.Text = "menuStrip1";
+			// 
+			// toolStripComboBox1
+			// 
+			this.toolStripComboBox1.BackColor = System.Drawing.Color.AliceBlue;
+			this.toolStripComboBox1.Items.AddRange(new object[] {
+            "Large Icon",
+            "Small Icon",
+            "Detail",
+            "Tile",
+            "List"});
+			this.toolStripComboBox1.Name = "toolStripComboBox1";
+			this.toolStripComboBox1.Size = new System.Drawing.Size(121, 23);
+			this.toolStripComboBox1.Text = "보기설정";
+			this.toolStripComboBox1.TextChanged += new System.EventHandler(this.toolStripComboBox1_TextChanged);
 			// 
 			// Admin_Form_Log
 			// 
@@ -130,14 +130,17 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.ClientSize = new System.Drawing.Size(495, 450);
-			this.Controls.Add(this.label1);
 			this.Controls.Add(this.ALog_Btn_ShowDetail);
-			this.Controls.Add(this.ALog_ComboBox);
 			this.Controls.Add(this.ALog_Btn_Cancel);
 			this.Controls.Add(this.ALog_ListV_List);
+			this.Controls.Add(this.ALog_MenuStrip);
+			this.MainMenuStrip = this.ALog_MenuStrip;
 			this.Name = "Admin_Form_Log";
 			this.Text = "내역 확인하기";
+			this.ALog_MenuStrip.ResumeLayout(false);
+			this.ALog_MenuStrip.PerformLayout();
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
@@ -149,8 +152,8 @@
 		private System.Windows.Forms.ColumnHeader date;
 		private System.Windows.Forms.ColumnHeader body;
 		private System.Windows.Forms.ImageList ALog_imageList;
-		private System.Windows.Forms.ComboBox ALog_ComboBox;
 		private System.Windows.Forms.Button ALog_Btn_ShowDetail;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.MenuStrip ALog_MenuStrip;
+		private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
 	}
 }

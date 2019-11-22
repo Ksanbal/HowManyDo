@@ -65,7 +65,7 @@
 			// pname
 			// 
 			this.pname.Text = "학부모성함";
-			this.pname.Width = 71;
+			this.pname.Width = 75;
 			// 
 			// email
 			// 

@@ -36,28 +36,26 @@ namespace HowManyDo.Admin
 
 		private void AModify_Btn_Ok_Click(object sender, EventArgs e)
 		{
-			MessageBox.Show("Bug로 인해 잠시 이용이 불가합니다.");
-			/*
+			//MessageBox.Show("Bug로 인해 잠시 이용이 불가합니다.");
+			
 			// TextBox중 하나라도 비어 있는 경우
 			if (AModify_TextB_Sname.Text == "" || AModify_TextB_Birth.Text == "" || AModify_TextB_Pname.Text == "" ||
-				AModify_TextB_Id.Text == "" || AModify_TextB_Passwd.Text == "")
+				AModify_TextB_Pname.Text == "" || AModify_TextB_Email.Text == "")
 			{
 				if (MessageBox.Show("아직 채워지지 않은 칸이 있습니다. 정말 등록하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
 				{
 					// 등록 기능 구현
 					ModifyAccount(AModify_TextB_Sname.Text, AModify_TextB_Birth.Text, AModify_TextB_Pname.Text,
-						AModify_TextB_Id.Text, AModify_TextB_Passwd.Text, "user", selectedid);
+						AModify_TextB_Email.Text, "user", selectedid);
 				}
-				else
-				{ }
 			}
 			else
 			{
 				// 등록 기능 구현
 				ModifyAccount(AModify_TextB_Sname.Text, AModify_TextB_Birth.Text, AModify_TextB_Pname.Text,
-					AModify_TextB_Id.Text, AModify_TextB_Passwd.Text, "user", selectedid);
+					AModify_TextB_Email.Text, "user", selectedid);
 			}
-			*/
+			
 		}
 
 		private void AModify_Btn_Cancel_Click(object sender, EventArgs e)
@@ -95,6 +93,7 @@ namespace HowManyDo.Admin
 			AModify_TextB_Birth.Text = accountinfo[1];
 			AModify_TextB_Pname.Text = accountinfo[2];
 			AModify_TextB_Email.Text = accountinfo[3];
+			sr.Close();
 		} // SetTextBoxs()
 
 

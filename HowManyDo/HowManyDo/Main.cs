@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 using System.IO;
 using HowManyDo.Admin;
-using HowManyDo.User;
 
 namespace HowManyDo
 {

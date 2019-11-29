@@ -132,6 +132,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.AliceBlue;
 			this.ClientSize = new System.Drawing.Size(337, 293);
 			this.Controls.Add(this.Main_Btn_Cancel);
 			this.Controls.Add(this.Main_TextB_LoginPasswd);

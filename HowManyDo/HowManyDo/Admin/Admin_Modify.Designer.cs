@@ -28,7 +28,6 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.AModify_ProgressBar = new System.Windows.Forms.ProgressBar();
 			this.AModify_Btn_Cancel = new System.Windows.Forms.Button();
 			this.AModify_Btn_Ok = new System.Windows.Forms.Button();
 			this.AModify_Label_Email = new System.Windows.Forms.Label();
@@ -41,17 +40,10 @@
 			this.AModify_TextB_Sname = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
-			// AModify_ProgressBar
-			// 
-			this.AModify_ProgressBar.Location = new System.Drawing.Point(229, 21);
-			this.AModify_ProgressBar.Name = "AModify_ProgressBar";
-			this.AModify_ProgressBar.Size = new System.Drawing.Size(155, 21);
-			this.AModify_ProgressBar.TabIndex = 25;
-			// 
 			// AModify_Btn_Cancel
 			// 
 			this.AModify_Btn_Cancel.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.AModify_Btn_Cancel.Location = new System.Drawing.Point(229, 116);
+			this.AModify_Btn_Cancel.Location = new System.Drawing.Point(229, 75);
 			this.AModify_Btn_Cancel.Name = "AModify_Btn_Cancel";
 			this.AModify_Btn_Cancel.Size = new System.Drawing.Size(155, 37);
 			this.AModify_Btn_Cancel.TabIndex = 24;
@@ -62,7 +54,7 @@
 			// AModify_Btn_Ok
 			// 
 			this.AModify_Btn_Ok.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.AModify_Btn_Ok.Location = new System.Drawing.Point(229, 62);
+			this.AModify_Btn_Ok.Location = new System.Drawing.Point(229, 21);
 			this.AModify_Btn_Ok.Name = "AModify_Btn_Ok";
 			this.AModify_Btn_Ok.Size = new System.Drawing.Size(155, 37);
 			this.AModify_Btn_Ok.TabIndex = 23;
@@ -143,7 +135,6 @@
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(396, 210);
-			this.Controls.Add(this.AModify_ProgressBar);
 			this.Controls.Add(this.AModify_Btn_Cancel);
 			this.Controls.Add(this.AModify_Btn_Ok);
 			this.Controls.Add(this.AModify_Label_Email);
@@ -163,8 +154,6 @@
 		}
 
 		#endregion
-
-		private System.Windows.Forms.ProgressBar AModify_ProgressBar;
 		private System.Windows.Forms.Button AModify_Btn_Cancel;
 		private System.Windows.Forms.Button AModify_Btn_Ok;
 		private System.Windows.Forms.Label AModify_Label_Email;

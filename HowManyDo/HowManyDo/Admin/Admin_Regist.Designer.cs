@@ -38,7 +38,6 @@
 			this.ARegist_TextB_Email = new System.Windows.Forms.TextBox();
 			this.ARegist_Btn_Ok = new System.Windows.Forms.Button();
 			this.ARegist_Btn_Cancel = new System.Windows.Forms.Button();
-			this.ARegist_ProgressBar = new System.Windows.Forms.ProgressBar();
 			this.SuspendLayout();
 			// 
 			// ARegist_TextB_Sname
@@ -112,7 +111,7 @@
 			// ARegist_Btn_Ok
 			// 
 			this.ARegist_Btn_Ok.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.ARegist_Btn_Ok.Location = new System.Drawing.Point(229, 62);
+			this.ARegist_Btn_Ok.Location = new System.Drawing.Point(229, 21);
 			this.ARegist_Btn_Ok.Name = "ARegist_Btn_Ok";
 			this.ARegist_Btn_Ok.Size = new System.Drawing.Size(155, 37);
 			this.ARegist_Btn_Ok.TabIndex = 10;
@@ -123,7 +122,7 @@
 			// ARegist_Btn_Cancel
 			// 
 			this.ARegist_Btn_Cancel.Font = new System.Drawing.Font("서울남산체 M", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-			this.ARegist_Btn_Cancel.Location = new System.Drawing.Point(229, 116);
+			this.ARegist_Btn_Cancel.Location = new System.Drawing.Point(229, 75);
 			this.ARegist_Btn_Cancel.Name = "ARegist_Btn_Cancel";
 			this.ARegist_Btn_Cancel.Size = new System.Drawing.Size(155, 37);
 			this.ARegist_Btn_Cancel.TabIndex = 11;
@@ -131,20 +130,11 @@
 			this.ARegist_Btn_Cancel.UseVisualStyleBackColor = true;
 			this.ARegist_Btn_Cancel.Click += new System.EventHandler(this.ARegist_Btn_Cancel_Click);
 			// 
-			// ARegist_ProgressBar
-			// 
-			this.ARegist_ProgressBar.Location = new System.Drawing.Point(229, 21);
-			this.ARegist_ProgressBar.Maximum = 4;
-			this.ARegist_ProgressBar.Name = "ARegist_ProgressBar";
-			this.ARegist_ProgressBar.Size = new System.Drawing.Size(155, 21);
-			this.ARegist_ProgressBar.TabIndex = 12;
-			// 
 			// Admin_Form_Regist
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(396, 210);
-			this.Controls.Add(this.ARegist_ProgressBar);
 			this.Controls.Add(this.ARegist_Btn_Cancel);
 			this.Controls.Add(this.ARegist_Btn_Ok);
 			this.Controls.Add(this.ARegist_Label_Email);
@@ -174,6 +164,5 @@
 		private System.Windows.Forms.TextBox ARegist_TextB_Email;
 		private System.Windows.Forms.Button ARegist_Btn_Ok;
 		private System.Windows.Forms.Button ARegist_Btn_Cancel;
-		private System.Windows.Forms.ProgressBar ARegist_ProgressBar;
 	}
 }

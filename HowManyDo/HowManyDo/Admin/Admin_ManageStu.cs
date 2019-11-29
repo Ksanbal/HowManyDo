@@ -85,7 +85,8 @@ namespace HowManyDo.Admin
 			List<string> accounts = new List<string>();
 			foreach(var item in di.GetFiles())
 			{
-				accounts.Add(item.Name);
+				if(item.Name != "super.txt") // 관리자 계정은 제외
+					accounts.Add(item.Name);
 			}
 
 			// 각 파일의 내용을 리스트뷰에 뿌려준다

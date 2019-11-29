@@ -20,7 +20,7 @@
 
 ## 4. 사용자 인터페이스
 ### - Admin
-![UserInterface_Admin](./img/UserINterface_Admin.jpg)
+![UserInterface_Admin](./img/UserInterface_Admin.jpg)
 
 
 ##### Write by K_Sanbal
